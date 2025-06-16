@@ -18,12 +18,9 @@ export default async function LatestInvoices() {
             return (
               <div
                 key={invoice.id}
-                className={clsx(
-                  'flex flex-row items-center justify-between py-4',
-                  {
-                    'border-t': i !== 0,
-                  },
-                )}
+                className={`flex flex-row items-center justify-between py-4 ${
+                    i !== 0 ? 'border-t' : ''
+                }`}
               >
                 <div className="flex items-center">
                   <Image
